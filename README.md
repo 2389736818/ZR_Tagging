@@ -5,6 +5,7 @@ Cvars:<br />
 **sm_stamina_burncost** - def **40.0**, Stamina penalty applied when burned<br />
 **sm_tagging_penalty** - def **25.0**, Stamina penalty applied when shot<br />
 **sm_tagging_time** - def **1.5**, How long tagging lasts from being shot<br />
+**sm_tagging_burneffect** - def **env_fire_medium**, Particle effect to simulate ignite (saves CPU for heavily populated servers)
 <br />
 Things to note:<br />
 * This incorporates Rules of _P burn_slow plugin. Please **disable burn_slow.smx** before testing to avoid conflicts<br />
