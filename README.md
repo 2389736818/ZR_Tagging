@@ -1,5 +1,5 @@
-# ZR_Tagging
-Tagging plugin for CS:GO Zombie Reloaded<br />
+# ZRiot_Tagging
+Tagging plugin for CS:GO Zombie Riot<br />
 <br />
 Cvars:<br />
 **sm_stamina_burncost** - def **40.0**, Stamina penalty applied when burned<br />
