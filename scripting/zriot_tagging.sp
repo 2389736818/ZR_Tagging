@@ -1,4 +1,4 @@
-##pragma semicolon 1
+#pragma semicolon 1
 
 #include <sourcemod>
 #include <sdktools>
@@ -298,7 +298,7 @@ public void OnTakeDamagePost(int victim, int attacker, int inflictor, float dama
 		} else if (StrEqual(sWeapon, "inferno", false)) {
 			//Burn damage should slow, but not molotovs
 			if (g_bZRLoaded) {
-				if (!ZR_IsClientZombie(victim))
+				if (!ZRiot_IsClientZombie(victim))
 					return;
 			}
 		}
@@ -317,7 +317,7 @@ public void OnTakeDamagePost(int victim, int attacker, int inflictor, float dama
 		}
 		if (g_bZRLoaded)
 		{
-			if (!ZR_IsClientZombie(victim) || ZR_IsClientZombie(attacker))
+			if (!ZRiot_IsClientZombie(victim) || ZRiot_IsClientZombie(attacker))
 			{
 				return;
 			}
