@@ -1,10 +1,10 @@
-#pragma semicolon 1
+##pragma semicolon 1
 
 #include <sourcemod>
 #include <sdktools>
 #include <sdkhooks>
 #undef REQUIRE_EXTENSIONS
-#include <zombiereloaded>
+#include <zriot>
 #define REQUIRE_EXTENSIONS
 
 #pragma newdecls required
@@ -39,7 +39,7 @@ int g_iBurning[(64 >> 5) + 1];
 
 public Plugin myinfo = 
 {
-	name = "ZR Tagging",
+	name = "ZRiot Tagging",
 	author = PLUGIN_AUTHOR,
 	description = "Tagging system for CS:GO based on Rules of _P plugin",
 	version = PLUGIN_VERSION,
@@ -48,13 +48,13 @@ public Plugin myinfo =
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
-	MarkNativeAsOptional("ZR_IsClientZombie");
+	MarkNativeAsOptional("ZRiot_IsClientZombie");
 	return APLRes_Success;
 }
 
 public void OnAllPluginsLoaded()
 {
-	g_bZRLoaded = GetFeatureStatus(FeatureType_Native, "ZR_IsClientZombie") == FeatureStatus_Available;
+	g_bZRLoaded = GetFeatureStatus(FeatureType_Native, "ZRiot_IsClientZombie") == FeatureStatus_Available;
 }
 
 public void OnPluginStart()
